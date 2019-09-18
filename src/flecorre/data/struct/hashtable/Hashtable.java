@@ -22,12 +22,12 @@ public class Hashtable<T> {
     }
 
     public void printHashtable() {
-        for (int i = 0; i < hashTable.length; i++) {
-            System.out.println(hashTable[i]);
+        for (T e : hashTable) {
+            System.out.println(e);
         }
     }
 
     private int hashKey(String key) {
-        return key.length() % this.hashTable.length;
+        return key.length() % hashTable.length;
     }
 }

@@ -1,4 +1,4 @@
-package flecorre.algo;
+package flecorre.algo.sort;
 
 public class QuickSort {
 
@@ -14,7 +14,6 @@ public class QuickSort {
         int[] array = {0, 13, 5, -6, 938, 1, 34, 69};
 
         quickSort(array, 0, array.length);
-
 
         print(array);
     }

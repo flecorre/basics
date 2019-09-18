@@ -1,12 +1,12 @@
-package flecorre.algo;
+package flecorre.algo.sort;
 
-public class BubbleSort {
+public class SelectionSort {
 
 /*
-    swap adjacent values to move large value to the right like bubbles
+    store largest index and swap to last unsorted index
     in-place algorithm
     O(n²) quadratic complexity
-    stable algorithm
+    unstable algorithm
 */
 
     public static void main(String[] args) {
@@ -14,13 +14,14 @@ public class BubbleSort {
         int[] array = {0, 13, 5, -6, 938, 1, 34, 69};
 
         for(int lastUnsortedIndex = array.length-1; lastUnsortedIndex > 0; lastUnsortedIndex--) {
+            int largest = 0;
             for(int i = 0; i < lastUnsortedIndex; i++) {
-                if(array[i] > array[i+1]) {
-                    swap(array, i, i+1);
+                if(array[i] > array[largest]) {
+                    largest = i;
                 }
             }
+            swap(array, largest, lastUnsortedIndex);
         }
-
         print(array);
     }
 
@@ -38,4 +39,5 @@ public class BubbleSort {
             System.out.println(element);
         }
     }
+
 }

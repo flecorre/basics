@@ -1,4 +1,4 @@
-package flecorre.algo;
+package flecorre.algo.sort;
 
 public class Factorial {
 
