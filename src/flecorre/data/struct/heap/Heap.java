@@ -100,19 +100,19 @@ public class Heap {
         System.out.println();
     }
 
-    public boolean isFull() {
+    private boolean isFull() {
         return size == heap.length;
     }
 
-    public int getParent(int index) {
+    private int getParent(int index) {
         return (index - 1) / 2;
     }
 
-    public boolean isEmpty() {
+    private boolean isEmpty() {
         return size == 0;
     }
 
-    public int getChild(int index, boolean left) {
+    private int getChild(int index, boolean left) {
         return 2 * index + (left ? 1 : 2);
     }
 
