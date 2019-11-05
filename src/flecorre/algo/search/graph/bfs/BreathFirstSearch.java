@@ -1,5 +1,7 @@
-package flecorre.algo.search.bfs;
+package flecorre.algo.search.graph.bfs;
 
+
+import flecorre.algo.search.graph.Vertex;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -26,7 +28,6 @@ public class BreathFirstSearch {
 
     private static void bfs(Vertex root) {
         Queue<Vertex> queue = new LinkedList<Vertex>();
-
         root.setVisited(true);
         queue.add(root);
 

@@ -10,17 +10,12 @@ public class MergeSort {
 */
 
     public static void main(String[] args) {
-
         int[] array = {0, 13, 5, -6, 938, 1, 34, 69};
-
         mergeSort(array, 0, array.length);
-
-
         print(array);
     }
 
     private static void mergeSort(int[] array, int start, int end) {
-
         if(end - start < 2) { //meaning we have an one-element array
             return;
         }
@@ -30,7 +25,6 @@ public class MergeSort {
         mergeSort(array, start, mid);
         mergeSort(array, mid, end);
         merge(array, start, mid, end);
-
     }
 
     private static void merge(int[] array, int start, int mid, int end) {
@@ -46,7 +40,7 @@ public class MergeSort {
         int[] temp = new int[end - start];
 
         while(i < mid && j < end) {
-            temp[tempIndex++] = array[i] < array[j] ? array[i++] : array[j++];
+            temp[tempIndex++] = array[i] <= array[j] ? array[i++] : array[j++];
         }
 
         System.arraycopy(array, i, array, start+tempIndex, mid-i); // if there is a leftover in the left array, this code will move the remaining value to the end of the right array

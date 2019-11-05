@@ -1,4 +1,4 @@
-package flecorre.algo.search.bfs;
+package flecorre.algo.search.graph;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,10 +24,6 @@ public class Vertex {
 
     public List<Vertex> getNeighbourList() {
         return neighbourList;
-    }
-
-    public void setNeighbourList(List<Vertex> neighbourList) {
-        this.neighbourList = neighbourList;
     }
 
     public void addNeighbour(Vertex v) {
