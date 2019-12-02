@@ -49,7 +49,6 @@ public class QuickSort {
             if(i < j) {
                 array[j] = array[i];
             }
-
         }
 
         array[j] = pivot;

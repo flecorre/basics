@@ -35,6 +35,7 @@ public class DepthFirstSearch {
     private static void dfs(List<Vertex> vertexList) {
         for(Vertex v : vertexList) {
             if(!v.isVisited()) {
+                v.setVisited(true);
                 //dfsRecursive(v);
                 dfsWithStack(v);
             }
@@ -54,7 +55,6 @@ public class DepthFirstSearch {
 
     private static void dfsWithStack(Vertex v) {
         Stack<Vertex> stack = new Stack<Vertex>();
-        v.setVisited(true);
         stack.push(v);
 
         while(!stack.isEmpty()) {

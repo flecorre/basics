@@ -1,4 +1,4 @@
-package flecorre.data.struct.heap;
+package flecorre.data.struct.tree.heap;
 
 public class Heap {
 
